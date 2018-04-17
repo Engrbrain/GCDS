@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace ZenGrantService.Models
+{
+    public class InspectionReport
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public int CompanyId { get; set; }
+        public int UserId { get; set; }
+        public int InspectionRequestId { get; set; }
+        public DateTime Timestamp { get; set; }
+        public DateTime InspectionStartDate { get; set; }
+        public DateTime InspectionEndDate { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public int InspectionCategoryId { get; set; }
+        public enumManager.InspectionStatus Status { get; set; }
+        public string InspectionResult { get; set; }
+        public DateTime ReviewedDate { get; set; }
+        public DateTime ApprovedDate { get; set; }
+        public string ReviewedBy { get; set; }
+        public string ApprovedBy { get; set; }
+        public int InspectionOfficerID { get; set; }
+        public bool IsDeleted { get; set; }
+        public string ReviewComment { get; set; }
+        public DateTime TimeStamp { get; set; }
+        public bool Is_Deleted { get; set; }
+        public string InspectionReportAttachment { get; set; }
+        public string ApprovedComment { get; set; }
+
+    }
+}
