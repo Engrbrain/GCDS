@@ -20,7 +20,7 @@ namespace GCDS.Models
         public string Comments_AdditionalInformation { get; set; }
         public DateTime Date { get; set; }
         public bool Is_Declared { get; set; }
-        public Signature  { get; set; }
+        public string Signature  { get; set; }
     public DateTime TimeStamp { get; set; }
     public bool Is_Deleted { get; set; }
 

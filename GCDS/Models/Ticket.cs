@@ -16,7 +16,7 @@ namespace GCDS.Models
         public int TicketNumber { get; set; }
         public DateTime DateRaised { get; set; }
         public string Subject { get; set; }
-        public TicketStatus TicketStatus { get; set; }
+        //public TicketStatus TicketStatus { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool Is_Deleted { get; set; }
 

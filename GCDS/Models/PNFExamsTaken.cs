@@ -21,9 +21,9 @@ namespace GCDS.Models
     public int IndexNumber { get; set; }
     public string ResultOfExam { get; set; }
     public string PlaceOFExam { get; set; }
-    public datetime TimeStamp { get; set; }
+    public DateTime TimeStamp { get; set; }
     public bool Is_Deleted { get; set; }
-    public datetime DateOfExam { get; set; }
+    public DateTime DateOfExam { get; set; }
 
 
 }
