@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class Solicitor
     {
@@ -23,5 +23,7 @@ namespace ZenGrantService.Models
         public gender SolicitorGender { get; set; }
         public string SolicitorEmailAddress { get; set; }
 
+
+        public ICollection<CourtCase> CourtCase { get; set; }
     }
 }

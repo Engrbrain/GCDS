@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class CourtCase
     {
@@ -17,8 +17,14 @@ namespace ZenGrantService.Models
         public string SuitDescription { get; set; }
         public DateTime SuitDate { get; set; }
         public string SolicitorID { get; set; }
-        public string CompanyID { get; set; }
+        public virtual Solicitor Solicitor { get; set; }
+        public int AMLCompanyProfileID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+
         public string CourtCaseStatus { get; set; }
+
+        public ICollection<CourtCaseJudgement> CourtCaseJudgement { get; set; }
+        public ICollection<CourtCaseReport> CourtCaseReport { get; set; }
 
     }
 }

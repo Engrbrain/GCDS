@@ -5,14 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class TicketMessage
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int CompanyID { get; set; }
+        public int AMLCompanyProfileID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public int TicketID { get; set; }
         public string Message { get; set; }
         public string Response { get; set; }
@@ -22,6 +23,5 @@ namespace ZenGrantService.Models
         public string MessageBy { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool Is_Deleted { get; set; }
-
     }
 }

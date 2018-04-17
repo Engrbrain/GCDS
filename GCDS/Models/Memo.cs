@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class Memo
     {
@@ -16,5 +16,6 @@ namespace ZenGrantService.Models
         public string MemoTitle { get; set; }
         public string MemoDescription { get; set; }
         public string MemoType { get; set; }
+
     }
 }

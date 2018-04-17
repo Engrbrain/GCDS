@@ -5,14 +5,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class ComplianceTeam
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int UserID { get; set; }
+
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
         public string FullName { get; set; }
         public string Description { get; set; }
         public int PhoneNumber { get; set; }

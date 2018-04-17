@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class InvoiceHeader
     {
@@ -13,7 +13,8 @@ namespace ZenGrantService.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int InvoiceNumber { get; set; }
-        public int CompanyID { get; set; }
+        public int AMLCompanyProfileID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public int UserID { get; set; }
         public DateTime DocumentDate { get; set; }
         public string HeaderText { get; set; }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class ConsentToSellGamingMachines
     {
@@ -13,7 +13,9 @@ namespace ZenGrantService.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int GamingEquipmentID { get; set; }
+        public virtual GamingEquipment GamingEquipment { get; set; }
         public int AMLCompanyProfileID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string FullNameOfApplicant { get; set; }
         public string Address { get; set; }
         public string Nationality { get; set; }

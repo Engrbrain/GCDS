@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class AMLPendingCivilAction
     {
@@ -13,6 +13,7 @@ namespace ZenGrantService.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int AMLCompanyProfileID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string CivilActionDescription { get; set; }
         public DateTime CivilActionDate { get; set; }
         public DateTime TimeStamp { get; set; }

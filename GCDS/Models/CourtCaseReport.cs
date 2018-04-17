@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class CourtCaseReport
     {
@@ -13,6 +13,7 @@ namespace ZenGrantService.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string CourtCaseId { get; set; }
+        public virtual CourtCase CourtCase { get; set; }
         public string ReportTitle { get; set; }
         public DateTime ReportDate { get; set; }
         public string UserID { get; set; }

@@ -5,15 +5,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ZenGrantService.Models
+namespace GCDS.Models
 {
     public class InspectionRequest
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int UserID { get; set; }
-        public int CompanyID { get; set; }
+        public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+        public int InspectionTeamId { get; set; }
+        public virtual InspectionTeam InspectionTeam { get; set; }
         public string InspectionReference { get; set; }
         public DateTime InspectionStartDate { get; set; }
         public DateTime InspectionEndDate { get; set; }
