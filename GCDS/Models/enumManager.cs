@@ -28,6 +28,17 @@ namespace GCDS.Models
             Cancelled
         }
         
+        public enum journaltype
+        {
+            [Display(Name = "Payment Journal")]
+            PaymentJournal,
+            [Display(Name = "Receipt Journal")]
+            ReceiptJournal,
+            [Display(Name = "General Journal")]
+            GeneralJournal,
+            [Display(Name = "Reverse Journal")]
+            ReversalJournal
+        }
 
         public enum PaymentStatus
         {
