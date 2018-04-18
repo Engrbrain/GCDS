@@ -13,6 +13,7 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int CompanyID { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public DateTime DateIssued { get; set; }
         public DateTime DateWithdrawn { get; set; }
         public string ApprovedBy { get; set; }
