@@ -39,19 +39,5 @@ namespace GCDS.Models
         public ICollection<AMLHoldingCompany> AMLHoldingCompany { get; set; }
         public ICollection<AMLLenders> AMLLenders { get; set; }
 
-        public ICollection<AML> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-        public ICollection<AMLBankAccount> AMLBankAccount { get; set; }
-
-
     }
 }

@@ -18,7 +18,7 @@ namespace GCDS.Models
         public string Description { get; set; }
         public string CreatedDate { get; set; }
         public string CompleteCOA { get; set; }
-        public accountType AccountType { get; set; }
+        //public accountType AccountType { get; set; }
         public double Is_Deleted { get; set; }
 
     }

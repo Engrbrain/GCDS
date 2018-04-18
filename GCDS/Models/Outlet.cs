@@ -17,7 +17,7 @@ namespace GCDS.Models
         public string HouseNumber { get; set; }
         public string StreetName { get; set; }
         public string City { get; set; }
-        public region Region { get; set; }
+       // public region Region { get; set; }
         public string Telephone { get; set; }
         public string ContactPerson { get; set; }
         public string ContactPersonPhone { get; set; }

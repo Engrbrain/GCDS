@@ -13,7 +13,7 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string JournalNumber { get; set; }
-        public journaltype JournalType { get; set; }
+        //public journaltype JournalType { get; set; }
         public string JournalText { get; set; }
         public DateTime JournalDate { get; set; }
         public string SourceDocumentReference { get; set; }
