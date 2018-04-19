@@ -1,0 +1,107 @@
+﻿@model GCDS.Models.AccountPayable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccountPayable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorEmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

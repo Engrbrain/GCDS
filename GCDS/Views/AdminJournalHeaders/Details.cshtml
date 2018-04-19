@@ -1,0 +1,139 @@
+﻿@model GCDS.Models.JournalHeader
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JournalHeader</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SourceDocumentReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SourceDocumentReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Period)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Period)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiscalYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiscalYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewedComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewedComment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedComment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedComment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

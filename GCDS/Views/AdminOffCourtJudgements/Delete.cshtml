@@ -1,0 +1,73 @@
+﻿@model GCDS.Models.OffCourtJudgement
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OffCourtJudgement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OffCourtCase.LitigationReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffCourtCase.LitigationReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attachment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attachment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LitigationStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LitigationStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

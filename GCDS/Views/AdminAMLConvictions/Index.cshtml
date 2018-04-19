@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GCDS.Models.AMLConviction>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfConvictor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationOfConvictor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourtConvicted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfConviction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffenceDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PenaltyDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfConvictor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationOfConvictor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtConvicted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfConviction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffenceDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PenaltyDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

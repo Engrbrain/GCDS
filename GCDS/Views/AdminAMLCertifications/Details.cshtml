@@ -1,0 +1,83 @@
+﻿@model GCDS.Models.AMLCertification
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AMLCertification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CertificateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Signature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Signature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CertificationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfApplicant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfApplicant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionToBeHeld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionToBeHeld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<GCDS.Models.InvoiceHeader>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeaderText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedComment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeaderText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedComment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

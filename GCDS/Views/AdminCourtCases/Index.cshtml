@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GCDS.Models.CourtCase>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuitNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuitTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuitDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuitDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SolicitorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourtCaseStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuitNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuitTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuitDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuitDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SolicitorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtCaseStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

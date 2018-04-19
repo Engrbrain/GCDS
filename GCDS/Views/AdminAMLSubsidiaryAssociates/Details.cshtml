@@ -1,0 +1,83 @@
+﻿@model GCDS.Models.AMLSubsidiaryAssociate
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AMLSubsidiaryAssociate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfIncorporation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfIncorporation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NatureOfBusiness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NatureOfBusiness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PercentageShareholding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PercentageShareholding)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

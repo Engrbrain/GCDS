@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GCDS.Models.JournalLine>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalHeader.JournalNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineItemNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GLAccount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Narration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DebitAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalHeader.JournalNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineItemNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GLAccount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Narration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DebitAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

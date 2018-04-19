@@ -1,0 +1,67 @@
+﻿@model GCDS.Models.OffCourtJudgement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OffCourtJudgement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OffCourtCase.LitigationReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffCourtCase.LitigationReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attachment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attachment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JudgementDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JudgementDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LitigationStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LitigationStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

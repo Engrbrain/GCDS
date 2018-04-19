@@ -1,0 +1,75 @@
+﻿@model GCDS.Models.CourtCase
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CourtCase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuitNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuitNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuitTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuitTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuitDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuitDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuitDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SolicitorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SolicitorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourtCaseStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourtCaseStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

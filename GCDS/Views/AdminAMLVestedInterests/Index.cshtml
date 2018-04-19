@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GCDS.Models.AMLVestedInterest>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Interest_InPerson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Interest_InCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterestDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Supporting_Company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Supporting_Business)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupportDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Interest_InPerson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Interest_InCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterestDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Supporting_Company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Supporting_Business)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupportDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GCDS.Models.OffCourtCase>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LitigationReference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LitigationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LitigationStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LitigationReference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaseTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaseDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LitigationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LitigationStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

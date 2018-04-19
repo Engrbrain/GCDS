@@ -1,0 +1,107 @@
+﻿@model GCDS.Models.InspectionOfficer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InspectionOfficer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectionOfficerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectionOfficerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectionReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectionReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeDesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeDesignation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectionOfficerType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectionOfficerType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

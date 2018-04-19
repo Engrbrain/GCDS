@@ -1,0 +1,75 @@
+﻿@model GCDS.Models.JournalLine
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JournalLine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalHeader.JournalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalHeader.JournalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineItemNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineItemNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GLAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GLAccount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Narration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Narration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DebitAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebitAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<GCDS.Models.JournalHeader>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JournalDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SourceDocumentReference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Period)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FiscalYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewedComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedComment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JournalDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SourceDocumentReference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Period)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FiscalYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewedComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedComment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
