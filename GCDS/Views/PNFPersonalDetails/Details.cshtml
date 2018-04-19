@@ -1,0 +1,571 @@
+﻿@model GCDS.Models.PNFPersonalDetails
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNFPersonalDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAndMiddleNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAndMiddleNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReasonsForChangeOfName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReasonsForChangeOfName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hometown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hometown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PresentNationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PresentNationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousNationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousNationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfPassportIssue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfPassportIssue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfPassportIssue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfPassportIssue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassportExpiryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassportExpiryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlacesTravelledTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlacesTravelledTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfTravels)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfTravels)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hobbies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hobbies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occupation_Profession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occupation_Profession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirthOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirthOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfBirthOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfBirthOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfDeathOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfDeathOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HometownOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HometownOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalityOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalityOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupationOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfFather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfFather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PopularSpotsCloseToFathersResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PopularSpotsCloseToFathersResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirthOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirthOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfBirthOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfBirthOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfDeathOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfDeathOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HometownOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HometownOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalityOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalityOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupationOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PopularSpotsCloseToMothesResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PopularSpotsCloseToMothesResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfMother)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfMother)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfProfessionalParties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfProfessionalParties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfSocialParties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfSocialParties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfPoliticalParties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfPoliticalParties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfCharitabledOrganizations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfCharitabledOrganizations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfMarriage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfMarriage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfMarriage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfMarriage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarriageCertificateNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarriageCertificateNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfOneOfKeyWitness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfOneOfKeyWitness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfOneOfKeyWitness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfOneOfKeyWitness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfBirthOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfBirthOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirthOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirthOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationOfFormerSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupationOfFormerSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamesOfChildrenWithPresentSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamesOfChildrenWithPresentSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgesOfChildrenWithPresentSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgesOfChildrenWithPresentSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Single)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Single)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfPresentGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfPresentGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfPresentGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfPresentGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfPresentGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfPresentGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationOfPresentGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupationOfPresentGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfFormerGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfFormerGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfFormerGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfFormerGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfFormerGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfFormerGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationOfFormerGirlOrBoyfriend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupationOfFormerGirlOrBoyfriend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamesOfChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamesOfChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgesOfChildren_For_Is_Single)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgesOfChildren_For_Is_Single)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

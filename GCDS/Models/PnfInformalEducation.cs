@@ -7,14 +7,15 @@ using System.Web;
 
 namespace GCDS.Models
 {
-    public class PNFInformalEducations
+    public class PNFInformalEducation
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int UserID { get; set; }
-        public int AMLCompanyProfileID { get; set; }
-        public int PNFPersonalDetailsID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+        public int PNFPersonalDetailsId { get; set; }
+        public virtual PNFPersonalDetails PNFPersonalDetails { get; set; }
         public string NameOfTrainingCenter_Place { get; set; }
         public string NameOfTrainer { get; set; }
         public string AddressOfTrainer { get; set; }

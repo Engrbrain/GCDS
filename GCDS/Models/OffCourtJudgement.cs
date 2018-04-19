@@ -13,6 +13,7 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int OffCourtCaseId { get; set; }
+        public virtual OffCourtCase OffCourtCase { get; set; }
         public string JudgementTitle { get; set; }
         public string JudgementDetails { get; set; }
         public string Attachment { get; set; }

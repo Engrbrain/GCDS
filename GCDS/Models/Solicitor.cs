@@ -20,7 +20,6 @@ namespace GCDS.Models
         public string Region { get; set; }
         public string SolicitorFullName { get; set; }
         public string SolicitorAddress { get; set; }
-       // public gender SolicitorGender { get; set; }
         public string SolicitorEmailAddress { get; set; }
 
 

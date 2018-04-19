@@ -12,8 +12,10 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int CompanyID { get; set; }
-        public int PaymentHeaderID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+        public int PaymentHeaderId { get; set; }
+        public virtual PaymentHeader PaymentHeader { get; set; }
         public int PaymentDate { get; set; }
         public int PaymentOption { get; set; }
         public int AmountPaid  { get; set; }

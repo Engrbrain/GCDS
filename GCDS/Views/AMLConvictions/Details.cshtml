@@ -1,0 +1,91 @@
+﻿@model GCDS.Models.AMLConviction
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AMLConviction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfConvictor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfConvictor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DesignationOfConvictor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DesignationOfConvictor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourtConvicted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourtConvicted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfConviction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfConviction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffenceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffenceDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PenaltyDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PenaltyDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

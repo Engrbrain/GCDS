@@ -18,7 +18,6 @@ namespace GCDS.Models
         public virtual ApplicationUser User { get; set; }
         public int InspectionRequestId { get; set; }
         public virtual InspectionRequest InspectionRequest { get; set; }
-        public DateTime Timestamp { get; set; }
         public DateTime InspectionStartDate { get; set; }
         public DateTime InspectionEndDate { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -29,7 +28,7 @@ namespace GCDS.Models
         public DateTime ApprovedDate { get; set; }
         public string ReviewedBy { get; set; }
         public string ApprovedBy { get; set; }
-        public int InspectionOfficerID { get; set; }
+        public int InspectionOfficerId { get; set; }
         public bool IsDeleted { get; set; }
         public string ReviewComment { get; set; }
         public DateTime TimeStamp { get; set; }

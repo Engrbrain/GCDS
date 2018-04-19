@@ -12,9 +12,9 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int GamingEquipmentID { get; set; }
+        public int GamingEquipmentId { get; set; }
         public virtual GamingEquipment GamingEquipment { get; set; }
-        public int AMLCompanyProfileID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
         public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string FullNameOfApplicant { get; set; }
         public string Address { get; set; }

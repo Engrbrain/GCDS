@@ -12,8 +12,10 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string JournalNumber { get; set; }
-        //public journaltype JournalType { get; set; }
+        public enumManager.journaltype JournalType { get; set; }
         public string JournalText { get; set; }
         public DateTime JournalDate { get; set; }
         public string SourceDocumentReference { get; set; }
@@ -27,5 +29,6 @@ namespace GCDS.Models
         public string ApprovedBy { get; set; }
         public string ApprovedComment { get; set; }
 
+        public ICollection<JournalLine> JournalLine { get; set; }
     }
 }

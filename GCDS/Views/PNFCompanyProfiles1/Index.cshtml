@@ -1,0 +1,154 @@
+﻿@model IEnumerable<GCDS.Models.PNFCompanyProfile>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseNumberOfCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetNameOfCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TownOfCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PopularSpotCloseToCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfIncorporation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistrationNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfInitialWorkForce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfBankers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOfBankers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfAuditors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOfAuditors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfOtherCompanyDirectors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressofOtherCompanyDirectors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReasonsForEstablishingCompany)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessAddressOfCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseNumberOfCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetNameOfCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TownOfCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PopularSpotCloseToCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfIncorporation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfInitialWorkForce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfBankers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOfBankers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfAuditors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOfAuditors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfOtherCompanyDirectors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressofOtherCompanyDirectors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReasonsForEstablishingCompany)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,107 @@
+﻿@model GCDS.Models.PNFExamsTaken
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNFExamsTaken</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfExam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfExaminingAuthority_Board)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfExaminingAuthority_Board)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndexNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndexNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultOfExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResultOfExam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOFExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOFExam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfExam)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,209 @@
+﻿@model GCDS.Models.PNFEmploymentHistory
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PNFEmploymentHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganisationFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganisationFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Apprenticeship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Apprenticeship)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_SelfEmployment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_SelfEmployment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_UnEmployment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_UnEmployment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_NationalService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_NationalService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOFOrganisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOFOrganisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelephoneNumberOfOrganisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelephoneNumberOfOrganisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmploymentStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmploymentStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmploymentEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmploymentEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Post)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DutiesDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DutiesDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_SecurityService_Employee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_SecurityService_Employee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BranchOfService_Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BranchOfService_Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank_Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank_Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfEnlistment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfEnlistment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfEnlistment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfEnlistment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfLeaving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfLeaving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReasonsForLeaving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReasonsForLeaving)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

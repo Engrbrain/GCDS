@@ -12,9 +12,9 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string InspectionTeamID { get; set; }
+        public string InspectionTeamId { get; set; }
         public virtual InspectionTeam InspectionTeam { get; set; }
-        public int InspectionOfficerID { get; set; }
+        public int InspectionOfficerId { get; set; }
         public virtual InspectionOfficer InspectionOfficer { get; set; }
         public DateTime DateAdded { get; set; }
         public string Is_Deleted { get; set; }

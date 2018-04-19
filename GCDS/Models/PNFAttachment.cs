@@ -12,8 +12,10 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int AMLCompanyProfileID { get; set; }
-        public string UserID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+        public int PNFPersonalDetailsId { get; set; }
+        public virtual PNFPersonalDetails PNFPersonalDetails { get; set; }
         public enumManager.PNFAttachmentCategory AttachmentCategory { get; set; }
         public string ReferenceNumber { get; set; }
         public string FilePath { get; set; }

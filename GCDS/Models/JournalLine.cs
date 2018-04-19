@@ -12,7 +12,8 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int JournalHeaderID { get; set; }
+        public int JournalHeaderId { get; set; }
+        public virtual JournalHeader JournalHeader { get; set; }
         public string JournalNumber { get; set; }
         public int LineItemNumber { get; set; }
         public string GLAccount { get; set; }

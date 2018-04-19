@@ -1,0 +1,107 @@
+﻿@model GCDS.Models.GamingEquipment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GamingEquipment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MachineReference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MachineReference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfAquisition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfAquisition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentSerialNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentSerialNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurposeOfEquipment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurposeOfEquipment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentManfacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentManfacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -23,7 +23,7 @@ namespace GCDS.Models
         public string InspectionReference { get; set; }
         public DateTime InspectionStartDate { get; set; }
         public DateTime InspectionEndDate { get; set; }
-        public int InspectionCategoryID { get; set; }
+        public int InspectionCategoryId { get; set; }
         public string Justification { get; set; }
         public bool IsReviewed { get; set; }
         public bool IsApproved { get; set; }

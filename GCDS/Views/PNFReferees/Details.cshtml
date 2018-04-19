@@ -1,0 +1,163 @@
+﻿@model GCDS.Models.PNFReferees
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNFReferees</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PopularSpotCloseToResidenceOfAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PopularSpotCloseToResidenceOfAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Student)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Student)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HallOfResidenceOfStudentAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HallOfResidenceOfStudentAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDesignationOfAssociate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDesignationOfAssociate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullNameOfCharacterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullNameOfCharacterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfChararcterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessAddressOfChararcterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfChararcterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentialAddressOfChararcterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PopularSpotCloseToResidenceOfChararcterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PopularSpotCloseToResidenceOfChararcterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelephoneNumberOfCharacterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelephoneNumberOfCharacterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddressOfCharacterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddressOfCharacterReferee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDesignationOfCharacterReferee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDesignationOfCharacterReferee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

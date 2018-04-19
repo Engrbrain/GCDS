@@ -12,12 +12,13 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int CompanyID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string OutletTitle { get; set; }
         public string HouseNumber { get; set; }
         public string StreetName { get; set; }
         public string City { get; set; }
-       // public region Region { get; set; }
+        public enumManager.region Region { get; set; }
         public string Telephone { get; set; }
         public string ContactPerson { get; set; }
         public string ContactPersonPhone { get; set; }

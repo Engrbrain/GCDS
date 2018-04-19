@@ -12,9 +12,10 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int UserID { get; set; }
-        public int AMLCompanyProfileID { get; set; }
-        public int PNFPersonalDetailsID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+        public int PNFPersonalDetailsId { get; set; }
+        public virtual PNFPersonalDetails PNFPersonalDetails { get; set; }
         public string FullNameOfAssociate { get; set; }
         public string BusinessAddressOfAssociate { get; set; }
         public string PopularSpotCloseToResidenceOfAssociate { get; set; }

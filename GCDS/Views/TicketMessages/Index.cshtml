@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GCDS.Models.TicketMessage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ticket.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Response)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResponseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResponseBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ticket.Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Response)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResponseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResponseBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

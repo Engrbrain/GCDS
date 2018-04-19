@@ -18,5 +18,7 @@ namespace GCDS.Models
         public string CompleteCOA { get; set; }
         public double Is_Deleted { get; set; }
 
+        public ICollection<MinorAccountCode> MinorAccountCode { get; set; }
+        public ICollection<MinorMinorAccountCode> MinorMinorAccountCode { get; set; }
     }
 }

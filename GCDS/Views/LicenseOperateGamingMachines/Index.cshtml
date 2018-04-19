@@ -1,0 +1,208 @@
+﻿@model IEnumerable<GCDS.Models.LicenseOperateGamingMachine>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GamingEquipment.EquipmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullNameOfApplicant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MakeOfMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfImportation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParticularsOfImportLicense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryOfOrigin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostOfMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AmountOfCustomDutyPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiptNumberOfCustomDutyPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncomeTaxClearanceCertificateNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPreviousLicense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousLicenseIssuedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeePaidForPreviousLicense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfExpiryForPreviousLicense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfProposedPremisesForMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProposedTown_CityForMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfPresentPremisesForMAchine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PresentTown_CityForMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_ProposedLocationOwnedByApplicant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionOfAcquiringLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPresentGamblingMachinesOwned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_TrueOwnerOfMachine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SignatureDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GamingEquipment.EquipmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullNameOfApplicant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nationality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MakeOfMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfImportation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParticularsOfImportLicense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryOfOrigin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostOfMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AmountOfCustomDutyPaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiptNumberOfCustomDutyPaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncomeTaxClearanceCertificateNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfPreviousLicense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousLicenseIssuedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeePaidForPreviousLicense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfExpiryForPreviousLicense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfProposedPremisesForMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProposedTown_CityForMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfPresentPremisesForMAchine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PresentTown_CityForMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_ProposedLocationOwnedByApplicant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionOfAcquiringLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfPresentGamblingMachinesOwned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_TrueOwnerOfMachine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Signature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SignatureDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

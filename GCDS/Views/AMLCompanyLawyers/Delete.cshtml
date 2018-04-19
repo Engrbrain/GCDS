@@ -1,0 +1,113 @@
+﻿@model GCDS.Models.AMLCompanyLawyer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AMLCompanyLawyer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfLawyerOrLegalAdvisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfLawyerOrLegalAdvisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfLawyerOrLegalAdvisor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfLawyerOrLegalAdvisor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfAccountant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfAccountant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfAccountant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfAccountant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfConsultant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfConsultant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfConsultant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfConsultant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfAuditor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfAuditor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressOfAuditor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressOfAuditor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

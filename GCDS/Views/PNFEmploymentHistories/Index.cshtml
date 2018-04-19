@@ -1,0 +1,166 @@
+﻿@model IEnumerable<GCDS.Models.PNFEmploymentHistory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganisationFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Apprenticeship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_SelfEmployment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_UnEmployment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_NationalService)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOFOrganisation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneNumberOfOrganisation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmploymentStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmploymentEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DutiesDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_SecurityService_Employee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchOfService_Unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rank_Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfEnlistment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaceOfEnlistment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfLeaving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReasonsForLeaving)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganisationFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Apprenticeship)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_SelfEmployment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_UnEmployment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_NationalService)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOFOrganisation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelephoneNumberOfOrganisation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmploymentStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmploymentEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DutiesDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_SecurityService_Employee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchOfService_Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rank_Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfEnlistment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaceOfEnlistment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfLeaving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReasonsForLeaving)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -13,9 +13,11 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int InvoiceNumber { get; set; }
-        public int AMLCompanyProfileID { get; set; }
+        public int? AMLCompanyProfileId { get; set; }
         public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
-        public int UserID { get; set; }
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
         public DateTime DocumentDate { get; set; }
         public string HeaderText { get; set; }
         public DateTime ApprovedDate { get; set; }
@@ -27,6 +29,6 @@ namespace GCDS.Models
         public bool Is_Deleted { get; set; }
         public string ApprovedComment { get; set; }
 
-
+        public ICollection<InvoiceLine> InvoiceLine { get; set; }
     }
 }

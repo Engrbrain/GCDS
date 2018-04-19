@@ -12,9 +12,8 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int AMLCompanyProfileID { get; set; }
-        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
-        public int TicketID { get; set; }
+        public int TicketId { get; set; }
+        public virtual Ticket Ticket { get; set; }
         public string Message { get; set; }
         public string Response { get; set; }
         public DateTime MessageDate { get; set; }

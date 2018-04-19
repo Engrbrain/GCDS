@@ -13,10 +13,8 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int InvoiceNumber { get; set; }
-        public int CompanyID { get; set; }
-        public int PaymentCategoryID { get; set; }
-        public int UserID { get; set; }
         public int InvoiceHeaderId { get; set; }
+        public virtual InvoiceHeader InvoiceHeader { get; set; }
         public string LineitemNumber { get; set; }
         public string Narration { get; set; }
         public int PaymentCateroryID { get; set; }

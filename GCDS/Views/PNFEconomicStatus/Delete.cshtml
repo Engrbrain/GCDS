@@ -1,0 +1,113 @@
+﻿@model GCDS.Models.PNFEconomicStatus
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PNFEconomicStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_AssetOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_AssetOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssetParticulars_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssetParticulars_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationOfAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionOfObtainingAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionOfObtainingAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCertificateNumberOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxCertificateNumberOfAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDateOfTaxCertificateOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssueDateOfTaxCertificateOfAsset)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

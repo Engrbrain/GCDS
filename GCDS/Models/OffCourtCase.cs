@@ -15,9 +15,13 @@ namespace GCDS.Models
         public string LitigationReference { get; set; }
         public string CaseTitle { get; set; }
         public string CaseDescription { get; set; }
-        public int? CompanyID { get; set; }
+        public int? AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string LitigationDate { get; set; }
         public enumManager.LitigationStatus LitigationStatus { get; set; }
+
+        public ICollection<OffCourtCaseReport> OffCourtCaseReport { get; set; }
+        public ICollection<OffCourtJudgement> OffCourtJudgement { get; set; }
 
     }
 }

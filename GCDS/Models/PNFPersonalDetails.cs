@@ -12,7 +12,8 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int AMLCompanyProfileID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string Surname { get; set; }
         public string FirstAndMiddleNames { get; set; }
         public string PreviousNames { get; set; }
@@ -20,9 +21,9 @@ namespace GCDS.Models
         public DateTime DateOfBirth { get; set; }
         public string PlaceOfBirth { get; set; }
         public string Hometown { get; set; }
-        public string PresentNationality { get; set; }
-        public string PreviousNationality { get; set; }
-        public string PassportType { get; set; }
+        public enumManager.country PresentNationality { get; set; }
+        public enumManager.country PreviousNationality { get; set; }
+        public enumManager.PassportType PassportType { get; set; }
         public int PassportNumber { get; set; }
         public DateTime DateOfPassportIssue { get; set; }
         public string PlaceOfPassportIssue { get; set; }
@@ -82,5 +83,16 @@ public string BusinessAddressOfMother { get; set; }
     public bool Is_Deleted { get; set; }
     public int AgesOfChildren_For_Is_Single { get; set; }
 
-}
+        public ICollection<PNFAttachment> PNFAttachment { get; set; }
+        public ICollection<PNFCompanyProfile> PNFCompanyProfile { get; set; }
+        public ICollection<PNFContactInformation> PNFContactInformation { get; set; }
+        public ICollection<PNFEconomicStatus> PNFEconomicStatus { get; set; }
+        public ICollection<PNFEducationHistory> PNFEducationHistory { get; set; }
+        public ICollection<PNFEmploymentHistory> PNFEmploymentHistory { get; set; }
+        public ICollection<PNFExamsTaken> PNFExamsTaken { get; set; }
+        public ICollection<PNFInformalEducation> PNFInformalEducation { get; set; }
+        public ICollection<PNFReferees> PNFReferees { get; set; }
+        public ICollection<PNFSecurityClearance> PNFSecurityClearance { get; set; }
+
+    }
 }

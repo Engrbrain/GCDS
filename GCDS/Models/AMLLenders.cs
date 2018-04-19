@@ -12,9 +12,8 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int AMLCompanyProfileID { get; set; }
+        public int AMLCompanyProfileId { get; set; }
         public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
-        public int CompanyID { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public int Account_RefNumber  { get; set; }

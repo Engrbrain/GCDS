@@ -12,7 +12,8 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int PurchaseHeaderID { get; set; }
+        public int PurchaseHeaderId { get; set; }
+        public virtual PurchaseHeader PurchaseHeader { get; set; }
         public string LineItemNumber { get; set; }
         public string Narration { get; set; }
         public double UnitPrice { get; set; }
@@ -27,5 +28,6 @@ namespace GCDS.Models
         public DateTime PaymentDate { get; set; }
         public string PaymentReference { get; set; }
 
+    
     }
 }

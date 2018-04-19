@@ -13,7 +13,7 @@ namespace GCDS.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int InvoiceNumber { get; set; }
-        public int ExpenseHeaderID { get; set; }
+        public int ExpenseHeaderId { get; set; }
         public virtual ExpenseHeader ExpenseHeader { get; set; }
         public int ExpenseCategoryID { get; set; }
         public virtual ExpenseCategory ExpenseCategory { get; set; }

@@ -16,6 +16,9 @@ namespace GCDS.Models
         public string MemoTitle { get; set; }
         public string MemoDescription { get; set; }
         public string MemoType { get; set; }
+        public int? AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
+
 
     }
 }

@@ -49,6 +49,116 @@ namespace GCDS.Models
             AwaitngPayment,
             Cancelled
         }
+
+        public enum PassportType
+        {
+            Regular,
+            Service,
+            Diplomatic
+        }
+
+        
+            public enum QueryCategory
+        {
+            [Display(Name = "Minimum Bankroll Fall Short")]
+            BankrollFallshort,
+            [Display(Name = "License Renewal")]
+            LicenseRenewal,
+            [Display(Name = "UnLicensed Machine")]
+            UnlicensedMachine,
+            [Display(Name = "Deficient Machine")]
+            DeficientMachine,
+            [Display(Name = "Dishourned Cheque")]
+            DishournedCheque,
+            [Display(Name = "Wrong Machine Installation Location")]
+            WrongMachineInstallationLocation,
+            [Display(Name = "Compliance Issue")]
+            ComplianceIssue
+
+        }
+
+        public enum ResolutionStatus
+        {
+            [Display(Name = "Acquitted")]
+            Acquitted,
+            [Display(Name = "Warned")]
+            Warned,
+            [Display(Name = "Fined")]
+            Fined,
+            [Display(Name = "License Withdrawn")]
+            LicenseWithdrawn,
+            [Display(Name = "Equipment Siezed")]
+            EquipmentSiezed,
+            [Display(Name = "Legal Action Taken")]
+            LegalActionTaken
+        }
+
+        public enum TicketStatus
+        {
+            [Display(Name = "Open")]
+            Open,
+            [Display(Name = "Answered")]
+            Answered,
+            [Display(Name = "Pending")]
+            Pending,
+            [Display(Name = "Resolved")]
+            Resolved,
+            [Display(Name = "Closed")]
+            Closed
+        }
+        public enum Gender
+        {
+            [Display(Name = "Male")]
+            Male,
+            [Display(Name = "Female")]
+            Female
+        }
+
+        public enum Scope
+        {
+            [Display(Name = "Gaming Operator")]
+            GamingOperator,
+            [Display(Name = "Administrator")]
+            Administrator
+        }
+
+        public enum accountType
+        {
+            [Display(Name = "Receivable")]
+            Receivable,
+            [Display(Name = "Payable")]
+            Payable,
+            [Display(Name = "Bank and Cash")]
+            BankandCash,
+            [Display(Name = "Credit Card")]
+            CreditCard,
+            [Display(Name = "Current Asset")]
+            CurrentAsset,
+            [Display(Name = "Non  Current Asset")]
+            NonCurrentAsset,
+            [Display(Name = "Prepayment")]
+            Prepayment,
+            [Display(Name = "Fixed Asset")]
+            FixedAsset,
+            [Display(Name = "Current Liabilities")]
+            CurrentLiabilities,
+            [Display(Name = "Non Current Liabilities")]
+            NonCurrentLiabilities,
+            [Display(Name = "Equity")]
+            Equity,
+            [Display(Name = "Current Year Earnings")]
+            CurrentYearEarnings,
+            [Display(Name = "OtherIncome")]
+            OtherIncome,
+            [Display(Name = "Income")]
+            Income,
+            [Display(Name = "Depreciation")]
+            Depreciation,
+            [Display(Name = "Expenses")]
+            Expenses,
+            [Display(Name = "Cost Of Revenue")]
+            CostOfRevenue
+        }
         public enum MaritalStatus
         {
             Single,

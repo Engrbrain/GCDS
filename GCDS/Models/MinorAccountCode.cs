@@ -12,12 +12,14 @@ namespace GCDS.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int MajorAccountCodeID { get; set; }
+        public int MajorAccountCodeId { get; set; }
+        public virtual MajorAccountCode MajorAccountCode { get; set; }
         public string Code { get; set; }
         public string Description { get; set; }
         public string CreatedDate { get; set; }
         public string CompleteCOA { get; set; }
         public double Is_Deleted { get; set; }
 
+        public ICollection<MinorMinorAccountCode> MinorMinorAccountCode { get; set; }
     }
 }

@@ -16,7 +16,6 @@ namespace GCDS.Models
         public virtual CourtCase CourtCase { get; set; }
         public string ReportTitle { get; set; }
         public DateTime ReportDate { get; set; }
-        public string UserID { get; set; }
         public string ReportAttachment { get; set; }
         public string ReportDetails { get; set; }
 

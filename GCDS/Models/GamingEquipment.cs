@@ -22,9 +22,11 @@ namespace GCDS.Models
         public string EquipmentLocation { get; set; }
         public enumManager.region Region { get; set; }
         public enumManager.EquipmentStatus CurrentStatus { get; set; }
+        public int AMLCompanyProfileId { get; set; }
+        public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
 
         public ICollection<ConsentToSellGamingMachines> ConsentToSellGamingMachines { get; set; }
         public ICollection<ImportGamingMachine> ImportGamingMachine { get; set; }
-        
+        public ICollection<LicenseOperateGamingMachine> LicenseOperateGamingMachine { get; set; }
     }
 }
