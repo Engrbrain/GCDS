@@ -1,0 +1,274 @@
+﻿@model IEnumerable<GCDS.Models.PNFContactInformation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentResidentialAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Town)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PopularSpotsOrPersonalityNearResidence)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaxNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorrespondenceAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousResidenceAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousHouseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousTown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousDistrict)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownHouseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownDistrict)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTownRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmploymentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessStreetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessTown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnyClosePopularSpotToBusiness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployersTelephoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployersFaxNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployesEmailAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentResidentialAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HouseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Suburb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Town)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.District)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PopularSpotsOrPersonalityNearResidence)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaxNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorrespondenceAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousResidenceAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousHouseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousTown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousDistrict)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownHouseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownDistrict)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeTownRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmploymentAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessStreetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessTown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnyClosePopularSpotToBusiness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployersTelephoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployersFaxNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployesEmailAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

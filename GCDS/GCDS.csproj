@@ -234,6 +234,9 @@
     <Compile Include="Controllers\AdminControllers\AdminOutletsController.cs" />
     <Compile Include="Controllers\AdminControllers\AdminPaymentHeadersController.cs" />
     <Compile Include="Controllers\AdminControllers\AdminPaymentLinesController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminPNFAttachmentsController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminPNFCompanyProfilesController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminPNFContactInformationsController.cs" />
     <Compile Include="Controllers\AdminControllers\InvoiceLinesController.cs" />
     <Compile Include="Controllers\AdminControllers\LicenseOperateGamingMachinesController.cs" />
     <Compile Include="Controllers\AMLAgreementsController.cs" />
@@ -7028,6 +7031,21 @@
     <Content Include="Views\AdminPaymentLines\Details.cshtml" />
     <Content Include="Views\AdminPaymentLines\Edit.cshtml" />
     <Content Include="Views\AdminPaymentLines\Index.cshtml" />
+    <Content Include="Views\AdminPNFAttachments\Create.cshtml" />
+    <Content Include="Views\AdminPNFAttachments\Delete.cshtml" />
+    <Content Include="Views\AdminPNFAttachments\Details.cshtml" />
+    <Content Include="Views\AdminPNFAttachments\Edit.cshtml" />
+    <Content Include="Views\AdminPNFAttachments\Index.cshtml" />
+    <Content Include="Views\AdminPNFCompanyProfiles\Create.cshtml" />
+    <Content Include="Views\AdminPNFCompanyProfiles\Delete.cshtml" />
+    <Content Include="Views\AdminPNFCompanyProfiles\Details.cshtml" />
+    <Content Include="Views\AdminPNFCompanyProfiles\Edit.cshtml" />
+    <Content Include="Views\AdminPNFCompanyProfiles\Index.cshtml" />
+    <Content Include="Views\AdminPNFContactInformations\Create.cshtml" />
+    <Content Include="Views\AdminPNFContactInformations\Delete.cshtml" />
+    <Content Include="Views\AdminPNFContactInformations\Details.cshtml" />
+    <Content Include="Views\AdminPNFContactInformations\Edit.cshtml" />
+    <Content Include="Views\AdminPNFContactInformations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

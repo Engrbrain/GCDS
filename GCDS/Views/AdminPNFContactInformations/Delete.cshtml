@@ -1,0 +1,353 @@
+﻿@model GCDS.Models.PNFContactInformation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PNFContactInformation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentResidentialAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentResidentialAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Town)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Town)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.District)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PopularSpotsOrPersonalityNearResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PopularSpotsOrPersonalityNearResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorrespondenceAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorrespondenceAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousResidenceAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousResidenceAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousHouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousHouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousRegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousRegion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownHouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownHouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTownRegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTownRegion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmploymentAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmploymentAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessStreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessStreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessTown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessTown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessRegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessRegion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnyClosePopularSpotToBusiness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnyClosePopularSpotToBusiness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersTelephoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployersTelephoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployersFaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployersFaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployesEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployesEmailAddress)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
