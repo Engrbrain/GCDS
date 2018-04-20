@@ -1,0 +1,184 @@
+﻿@model IEnumerable<GCDS.Models.PNFEducationHistory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOfSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBeganSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCompletedSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualificationAchievedFromSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradesAchievedFromSeniorSecondarySchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOfCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBeganCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCompletedCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualificationAchievedFromCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradesAchievedFromCollege)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_FullTimeStudy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_PartTimeStudy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressOfHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAttendedHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectsStudiedAtHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DegreeTitleFromHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GradesAchievedFromHigher_Prof_VocInstitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QualificationAchievedFromHigher_Prof_VocInstitution)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOfSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateBeganSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCompletedSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualificationAchievedFromSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradesAchievedFromSeniorSecondarySchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOfCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateBeganCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCompletedCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualificationAchievedFromCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradesAchievedFromCollege)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_FullTimeStudy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_PartTimeStudy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressOfHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAttendedHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectsStudiedAtHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DegreeTitleFromHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradesAchievedFromHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualificationAchievedFromHigher_Prof_VocInstitution)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

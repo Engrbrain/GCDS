@@ -1,0 +1,136 @@
+﻿@model IEnumerable<GCDS.Models.PNFReferees>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullNameOfAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PopularSpotCloseToResidenceOfAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Student)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HallOfResidenceOfStudentAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDesignationOfAssociate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullNameOfCharacterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessAddressOfChararcterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResidentialAddressOfChararcterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PopularSpotCloseToResidenceOfChararcterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneNumberOfCharacterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddressOfCharacterReferee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDesignationOfCharacterReferee)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullNameOfAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessAddressOfAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PopularSpotCloseToResidenceOfAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResidentialAddressOfAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Student)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HallOfResidenceOfStudentAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDesignationOfAssociate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullNameOfCharacterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessAddressOfChararcterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResidentialAddressOfChararcterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PopularSpotCloseToResidenceOfChararcterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelephoneNumberOfCharacterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddressOfCharacterReferee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDesignationOfCharacterReferee)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
