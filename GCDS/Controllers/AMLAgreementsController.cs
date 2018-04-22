@@ -10,7 +10,7 @@ using GCDS.Models;
 
 namespace GCDS.Controllers
 {
-    public class AMLAgreementController : Controller
+    public class AMLAgreementsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 

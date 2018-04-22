@@ -18,13 +18,13 @@ namespace GCDS.Models
         public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string FullNameOfApplicant { get; set; }
         public string Address { get; set; }
-        public string Nationality { get; set; }
+        public enumManager.country Nationality { get; set; }
         public string MakeOfMachine { get; set; }
         public int SerialNumber { get; set; }
         public string NatureOfProposedTransaction { get; set; }
         public string NatureOfProposedBuyer_Hirer_Consignee { get; set; }
         public string AddressOfProposedBuyer_Hirer_Consignee { get; set; }
-        public string NationalityOfProposedBuyer_Hirer_Consignee { get; set; }
+        public enumManager.country NationalityOfProposedBuyer_Hirer_Consignee { get; set; }
         public string NameOfProposedPremisesForMachine { get; set; }
         public string ProposedTown_CityForMachine { get; set; }
         public string NameOfPresentPremisesForMAchine { get; set; }

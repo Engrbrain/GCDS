@@ -16,14 +16,11 @@ namespace GCDS.Models
         public virtual AMLCompanyProfile AMLCompanyProfile { get; set; }
         public string NameOfLawyerOrLegalAdvisor { get; set; }
         public string AddressOfLawyerOrLegalAdvisor { get; set; }
-        public string NameOfAccountant { get; set; }
-        public string AddressOfAccountant { get; set; }
-        public string NameOfConsultant { get; set; }
-        public string AddressOfConsultant { get; set; }
-        public string NameOfAuditor { get; set; }
+        public string EmailAddress { get; set; }
+        public string PhoneNumber { get; set; }
+        public enumManager.ProfessionalType ProfessionalType { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool Is_Deleted { get; set; }
-        public string AddressOfAuditor { get; set; }
 
     }
 }

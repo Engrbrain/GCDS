@@ -18,6 +18,7 @@ namespace GCDS.Models
         public DateTime CivilActionDate { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool Is_Deleted { get; set; }
+        public enumManager.CivilActionStatus CivilActionStatus { get; set; }
         public string AmountOwed { get; set; }
 
     }

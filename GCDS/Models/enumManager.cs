@@ -17,6 +17,50 @@ namespace GCDS.Models
             Rejected
 
         }
+        
+        public enum CivilActionStatus
+        {
+            Pending,
+            Closed,
+            Won,
+            Penalized
+
+        }
+        public enum InterestType
+        {
+            [Display(Name = "Interest in Person")]
+            Person,
+            [Display(Name = "Interest in Business")]
+            Business,
+            [Display(Name = "Interest in Other Company")]
+            Company,
+            [Display(Name = "Financial Assistant to Company")]
+            FinancialAssistantToCompany,
+            [Display(Name = "Financial Assistant to Business")]
+            FinancialAssistantToBusiness,
+            [Display(Name = "Financial Assistant to any other body")]
+            FinancialAssistantToBody,
+
+
+        }
+        public enum ProfessionalType
+        {
+            [Display(Name = "Lawyers")]
+            Lawyers,
+            [Display(Name = "Legal Advisor")]
+            LegalAdvisor,
+            [Display(Name = "Accountants")]
+            Accountants,
+            [Display(Name = "Auditors")]
+            Auditors,
+            [Display(Name = "Consultants")]
+            Consultants,
+            [Display(Name = "Others")]
+            Others
+
+        }
+        
+
 
         public enum InvoiceStatus
         {

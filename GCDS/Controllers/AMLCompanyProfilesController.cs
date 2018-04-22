@@ -10,7 +10,7 @@ using GCDS.Models;
 
 namespace GCDS.Controllers
 {
-    public class AMLCompanyProfileController : Controller
+    public class AMLCompanyProfilesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -39,7 +39,7 @@ namespace GCDS.Controllers
         // GET: AMLCompanyProfile/Create
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.Users, "Id", "firstname");
+            
             return View();
         }
 
