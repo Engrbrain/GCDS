@@ -1,0 +1,99 @@
+﻿@model GCDS.Models.PNFSecurityClearance
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNFSecurityClearance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_LawOffender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_LawOffender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffenseDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffenseDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments_AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments_AdditionalInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Declared)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Declared)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Signature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Signature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

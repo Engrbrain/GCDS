@@ -1,0 +1,107 @@
+﻿@model GCDS.Models.PNFEconomicStatus
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNFEconomicStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PNFPersonalDetails.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_AssetOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_AssetOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssetParticulars_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssetParticulars_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationOfAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionOfObtainingAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionOfObtainingAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCertificateNumberOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxCertificateNumberOfAsset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDateOfTaxCertificateOfAsset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssueDateOfTaxCertificateOfAsset)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

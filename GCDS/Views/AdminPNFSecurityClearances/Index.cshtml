@@ -1,0 +1,88 @@
+﻿@model IEnumerable<GCDS.Models.PNFSecurityClearance>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNFPersonalDetails.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_LawOffender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffenseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments_AdditionalInformation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Declared)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMLCompanyProfile.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNFPersonalDetails.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_LawOffender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffenseDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments_AdditionalInformation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Declared)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Signature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
