@@ -267,6 +267,7 @@
     <Compile Include="Controllers\ConsentToSellGamingMachinesController.cs" />
     <Compile Include="Controllers\GamingEquipmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LicenseOperateGamingMachineAttachmentsController.cs" />
     <Compile Include="Controllers\ImportGamingMachinesController.cs" />
     <Compile Include="Controllers\InvoiceHeadersController.cs" />
     <Compile Include="Controllers\LicenseOperateGamingMachinesController.cs" />
@@ -306,6 +307,7 @@
     <Compile Include="Models\AMLCertification.cs" />
     <Compile Include="Models\AMLBankAccount.cs" />
     <Compile Include="Models\ChartOfAccount.cs" />
+    <Compile Include="Models\LicenseOperateGamingMachineAttachment.cs" />
     <Compile Include="Models\InspectionTeamMembers.cs" />
     <Compile Include="Models\Memo.cs" />
     <Compile Include="Models\JournalLine.cs" />
@@ -6932,11 +6934,6 @@
     <Content Include="Views\AdminImportGamingMachines\Details.cshtml" />
     <Content Include="Views\AdminImportGamingMachines\Edit.cshtml" />
     <Content Include="Views\AdminImportGamingMachines\Index.cshtml" />
-    <Content Include="Views\InspectionOfficers\Create.cshtml" />
-    <Content Include="Views\InspectionOfficers\Delete.cshtml" />
-    <Content Include="Views\InspectionOfficers\Details.cshtml" />
-    <Content Include="Views\InspectionOfficers\Edit.cshtml" />
-    <Content Include="Views\InspectionOfficers\Index.cshtml" />
     <Content Include="Views\AdminInspectionOfficers\Create.cshtml" />
     <Content Include="Views\AdminInspectionOfficers\Delete.cshtml" />
     <Content Include="Views\AdminInspectionOfficers\Details.cshtml" />
@@ -7102,6 +7099,11 @@
     <Content Include="Views\AdminTickets\Details.cshtml" />
     <Content Include="Views\AdminTickets\Edit.cshtml" />
     <Content Include="Views\AdminTickets\Index.cshtml" />
+    <Content Include="Views\LicenseOperateGamingMachineAttachments\Create.cshtml" />
+    <Content Include="Views\LicenseOperateGamingMachineAttachments\Delete.cshtml" />
+    <Content Include="Views\LicenseOperateGamingMachineAttachments\Details.cshtml" />
+    <Content Include="Views\LicenseOperateGamingMachineAttachments\Edit.cshtml" />
+    <Content Include="Views\LicenseOperateGamingMachineAttachments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

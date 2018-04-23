@@ -161,5 +161,6 @@ namespace GCDS.Models
 
         }
 
-        }
+        public System.Data.Entity.DbSet<GCDS.Models.LicenseOperateGamingMachineAttachment> ImportGamingMachineAttachments { get; set; }
+    }
 }
