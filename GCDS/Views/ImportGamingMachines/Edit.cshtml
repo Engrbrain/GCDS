@@ -5,205 +5,296 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<div class="m-aside-menu-overlay"></div>
+<!-- END: Left Aside -->
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator">
+                    Application for Consent to Import a Gaming Machine
+                </h3>
+                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                    <li class="m-nav__item m-nav__item--home">
+                        <a href="#" class="m-nav__link m-nav__link--icon">
+                            <i class="m-nav__link-icon la la-home"></i>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
 
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ImportGamingMachine</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.GamingEquipmentId, "GamingEquipmentId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("GamingEquipmentId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.GamingEquipmentId, "", new { @class = "text-danger" })
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                Index
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                               Modify Apply for Consent
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.AMLCompanyProfileId, "AMLCompanyProfileId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("AMLCompanyProfileId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AMLCompanyProfileId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FullNameOfApplicant, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FullNameOfApplicant, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FullNameOfApplicant, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nationality, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nationality, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MakeOfMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MakeOfMachine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MakeOfMachine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SerialNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SerialNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CountryOfOrigin, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CountryOfOrigin, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CountryOfOrigin, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CostOfMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CostOfMachine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CostOfMachine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Is_MachineImportForResale, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Is_MachineImportForResale)
-                    @Html.ValidationMessageFor(model => model.Is_MachineImportForResale, "", new { @class = "text-danger" })
+            <div>
+                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                    <a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                        <i class="la la-plus m--hide"></i>
+                        <i class="la la-ellipsis-h"></i>
+                    </a>
+                    <div class="m-dropdown__wrapper">
+                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                        <div class="m-dropdown__inner">
+                            <div class="m-dropdown__body">
+                                <div class="m-dropdown__content">
+                                    <ul class="m-nav">
+                                        <li class="m-nav__section m-nav__section--first m--hide">
+                                            <span class="m-nav__section-text">
+                                                Quick Actions
+                                            </span>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                <span class="m-nav__link-text">
+                                                    Activity
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                <span class="m-nav__link-text">
+                                                    Messages
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                <span class="m-nav__link-text">
+                                                    FAQ
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                <span class="m-nav__link-text">
+                                                    Support
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                        <li class="m-nav__item">
+                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                Submit
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NameOfProposedPremisesForMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NameOfProposedPremisesForMachine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NameOfProposedPremisesForMachine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProposedTown_CityForMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ProposedTown_CityForMachine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ProposedTown_CityForMachine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NameOfPresentPremisesForMAchine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NameOfPresentPremisesForMAchine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NameOfPresentPremisesForMAchine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PresentTown_CityForMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PresentTown_CityForMachine, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PresentTown_CityForMachine, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NumberOfPresentGamblingMachinesLicense, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NumberOfPresentGamblingMachinesLicense, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NumberOfPresentGamblingMachinesLicense, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Is_TrueOwnerOfMachine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Is_TrueOwnerOfMachine)
-                    @Html.ValidationMessageFor(model => model.Is_TrueOwnerOfMachine, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfExpiryOfPresentLicense, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateOfExpiryOfPresentLicense, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfExpiryOfPresentLicense, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Signature, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Signature, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Signature, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ImportationDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ImportationDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ImportationDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TimeStamp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TimeStamp, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TimeStamp, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Is_Deleted, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Is_Deleted)
-                    @Html.ValidationMessageFor(model => model.Is_Deleted, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
-}
+    <!-- END: Subheader -->
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    <div class="m-content">
+        <div class="m-portlet">
+            <div class="m-portlet__body">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>First schedule - (Section 15)</h4>
+                        <p>Application for consent to import a gambling machine</p>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.HiddenFor(model => model.AMLCompanyProfileId)
+                        @Html.HiddenFor(model => model.Id)
+                        @Html.HiddenFor(model => model.Is_Deleted)
+                        @Html.HiddenFor(model => model.TimeStamp)
+
+                        
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Gaming Equipment</span>
+                            <div class="col-md-10">
+                                @Html.DropDownList("GamingEquipmentId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.GamingEquipmentId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Full Name of Applicant</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.FullNameOfApplicant, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FullNameOfApplicant, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Address of applicant</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Nationality of applicant</span>
+                            <div class="col-md-10">
+                                @Html.EnumDropDownListFor(model => model.Nationality, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Make of machine</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.MakeOfMachine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MakeOfMachine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Serial No</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.SerialNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.SerialNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Country of origin</span>
+                            <div class="col-md-10">
+                                @Html.EnumDropDownListFor(model => model.CountryOfOrigin, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CountryOfOrigin, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Cost of Machine</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CostOfMachine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CostOfMachine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Will the machine be imported for resale? – Yes / No</span>
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Is_MachineImportForResale)
+                                    @Html.ValidationMessageFor(model => model.Is_MachineImportForResale, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Proposed location of the machine - Name of premises</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NameOfProposedPremisesForMachine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NameOfProposedPremisesForMachine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Proposed location of the machine - Town or City</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ProposedTown_CityForMachine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProposedTown_CityForMachine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Present location of machine - Name of premises</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NameOfPresentPremisesForMAchine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NameOfPresentPremisesForMAchine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Present location of machine - Town or city</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PresentTown_CityForMachine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PresentTown_CityForMachine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Number of present gambling machine license (if any)</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NumberOfPresentGamblingMachinesLicense, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NumberOfPresentGamblingMachinesLicense, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Date of expiry of present licence</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DateOfExpiryOfPresentLicense, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                                @Html.ValidationMessageFor(model => model.DateOfExpiryOfPresentLicense, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="control-label col-md-6">
+                                I CERTIFY that I am the true owner of the gambling machine in respect of
+                                which this application is made and that the particulars given in the application are
+                                true.
+                            </span>
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Is_TrueOwnerOfMachine)
+                                    @Html.ValidationMessageFor(model => model.Is_TrueOwnerOfMachine, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="control-label col-md-2"> Upload Signature (Scan your signed signature on a white paper and upload the image file)</span>
+                            <div class="col-md-10">
+                                @Html.TextBox("file", "", new { type = "file", @class = "custom-file-input" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Importation Date</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ImportationDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                                @Html.ValidationMessageFor(model => model.ImportationDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Modify" class="btn btn-default" />
+                                <a title="Back to List" id="sample_editable_1_new" href="@Url.Action("Index", "ImportGamingMachines")" class="btn btn-warning"><i class='fa fa-align-justify'></i> Back to List</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    </div>
+<!-- end:: Body -->

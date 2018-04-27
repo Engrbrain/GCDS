@@ -5,97 +5,198 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>AMLSubsidiaryAssociate</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.AMLCompanyProfileId, "AMLCompanyProfileId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("AMLCompanyProfileId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AMLCompanyProfileId, "", new { @class = "text-danger" })
+<div class="m-aside-menu-overlay"></div>
+<!-- END: Left Aside -->
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator">
+                    AML Subsidiaries and Associate Companies
+                </h3>
+                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                    <li class="m-nav__item m-nav__item--home">
+                        <a href="#" class="m-nav__link m-nav__link--icon">
+                            <i class="m-nav__link-icon la la-home"></i>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                License Registration
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                AML Form
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                Modify Subsidiaries and Associate Companies
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NameOfCompany, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NameOfCompany, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NameOfCompany, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.RegistrationNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.RegistrationNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RegistrationNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PlaceOfIncorporation, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PlaceOfIncorporation, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PlaceOfIncorporation, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NatureOfBusiness, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NatureOfBusiness, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NatureOfBusiness, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TimeStamp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TimeStamp, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TimeStamp, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Is_Deleted, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Is_Deleted)
-                    @Html.ValidationMessageFor(model => model.Is_Deleted, "", new { @class = "text-danger" })
+            <div>
+                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                    <a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                        <i class="la la-plus m--hide"></i>
+                        <i class="la la-ellipsis-h"></i>
+                    </a>
+                    <div class="m-dropdown__wrapper">
+                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                        <div class="m-dropdown__inner">
+                            <div class="m-dropdown__body">
+                                <div class="m-dropdown__content">
+                                    <ul class="m-nav">
+                                        <li class="m-nav__section m-nav__section--first m--hide">
+                                            <span class="m-nav__section-text">
+                                                Quick Actions
+                                            </span>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                <span class="m-nav__link-text">
+                                                    Activity
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                <span class="m-nav__link-text">
+                                                    Messages
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                <span class="m-nav__link-text">
+                                                    FAQ
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                <span class="m-nav__link-text">
+                                                    Support
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                        <li class="m-nav__item">
+                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                Submit
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- END: Subheader -->
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PercentageShareholding, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PercentageShareholding, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PercentageShareholding, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <div class="m-content">
+        <div class="m-portlet">
+            <div class="m-portlet__body">
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <p>
+                            Is the company a parent company of a group of companies?
+                            If ‘yes’ please give details of all subsidiary and associate companies of the group:
+                        </p>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.HiddenFor(model => model.AMLCompanyProfileId)
+                        @Html.HiddenFor(model => model.Id)
+                        @Html.HiddenFor(model => model.Is_Deleted)
+                        @Html.HiddenFor(model => model.TimeStamp)
+
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Name Of Company</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NameOfCompany, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NameOfCompany, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Registration Number</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.RegistrationNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.RegistrationNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Place of Incorporation</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PlaceOfIncorporation, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PlaceOfIncorporation, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">Nature of Business</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NatureOfBusiness, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NatureOfBusiness, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <span class="control-label col-md-6">% Shareholding of Company Subsidiary of Associate Entities</span>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PercentageShareholding, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PercentageShareholding, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Modify" class="btn btn-default" />
+                                <a title="Back to List" id="sample_editable_1_new" href="@Url.Action("Index", "AMLSubsidiaryAssociates")" class="btn btn-warning"><i class='fa fa-align-justify'></i> Back to List</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
             </div>
         </div>
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    </div>
+<!-- end:: Body -->
