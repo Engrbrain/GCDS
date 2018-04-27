@@ -139,10 +139,12 @@
                         @Html.HiddenFor(model => model.Id)
                         @Html.HiddenFor(model => model.Is_Deleted)
                         @Html.HiddenFor(model => model.TimeStamp)
+                        @Html.HiddenFor(model => model.AMLCompanyProfile)
+                        @Html.HiddenFor(model => model.NumberOfShareholdersWithLessThanFivePercent)
 
 
                         <div class="form-group">
-                            <span class="control-label col-md-6">Name of Shareholding</span>
+                            <span class="control-label col-md-6">Name of Shareholder</span>
                             <div class="col-md-10">
                                 @Html.EditorFor(model => model.NameOfShareholder, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.NameOfShareholder, "", new { @class = "text-danger" })

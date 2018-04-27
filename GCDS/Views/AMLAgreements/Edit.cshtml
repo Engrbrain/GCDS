@@ -47,7 +47,7 @@
                     <li class="m-nav__item">
                         <a href="" class="m-nav__link">
                             <span class="m-nav__link-text">
-                                Modify Agreement
+                                Modify AML Agreement
                             </span>
                         </a>
                     </li>
@@ -138,6 +138,9 @@
                         @Html.HiddenFor(model => model.Is_Deleted)
                         @Html.HiddenFor(model => model.TimeStamp)
                         @Html.HiddenFor(model => model.UserId)
+                        @Html.HiddenFor(model => model.AMLCompanyProfile)
+                        @Html.HiddenFor(model => model.User)
+                        
 
 
                         <div class="form-group">

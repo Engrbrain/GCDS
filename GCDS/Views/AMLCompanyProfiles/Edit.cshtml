@@ -137,6 +137,20 @@
                         @Html.HiddenFor(model => model.UserId)
                         @Html.HiddenFor(model => model.TimeStamp)
                         @Html.HiddenFor(model => model.User)
+                        @Html.HiddenFor(model => model.AMLAgreement)
+                        @Html.HiddenFor(model => model.AMLAttachments)
+                        @Html.HiddenFor(model => model.AMLBankAccount)
+                        @Html.HiddenFor(model => model.AMLCertification)
+                        @Html.HiddenFor(model => model.AMLCivilAction)
+                        @Html.HiddenFor(model => model.AMLCompanyLawyer)
+                        @Html.HiddenFor(model => model.AMLConviction)
+                        @Html.HiddenFor(model => model.AMLHoldingCompany)
+                        @Html.HiddenFor(model => model.AMLLenders)
+                        @Html.HiddenFor(model => model.ConsentToSellGamingMachines)
+                        @Html.HiddenFor(model => model.CourtCase)
+                        @Html.HiddenFor(model => model.ExpenseHeader)
+                        @Html.HiddenFor(model => model.GamingEquipment)
+                        @Html.HiddenFor(model => model.ImportGamingMachine)
 
 
                         <div class="form-group">
@@ -198,7 +212,7 @@
                         <div class="form-group">
                             <span class="control-label col-md-2">Date of Incorporation</span>
                             <div class="col-md-10">
-                                @Html.EditorFor(model => model.DateOfIncorporationOfCompany, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.DateOfIncorporationOfCompany, new { htmlAttributes = new { @class = "form-control", type = "date" } })
                                 @Html.ValidationMessageFor(model => model.DateOfIncorporationOfCompany, "", new { @class = "text-danger" })
                             </div>
                         </div>
