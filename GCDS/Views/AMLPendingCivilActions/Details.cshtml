@@ -5,63 +5,190 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>AMLPendingCivilAction</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AMLCompanyProfile.UserId)
-        </dt>
+<div class="m-aside-menu-overlay"></div>
+<!-- END: Left Aside -->
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title m-subheader__title--separator">
+                    AML Pending Civil Actions
+                </h3>
+                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                    <li class="m-nav__item m-nav__item--home">
+                        <a href="#" class="m-nav__link m-nav__link--icon">
+                            <i class="m-nav__link-icon la la-home"></i>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                License Registration
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                AML Form
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-nav__separator">
+                        -
+                    </li>
+                    <li class="m-nav__item">
+                        <a href="" class="m-nav__link">
+                            <span class="m-nav__link-text">
+                                AML Pending Civil Action Details
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                    <a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                        <i class="la la-plus m--hide"></i>
+                        <i class="la la-ellipsis-h"></i>
+                    </a>
+                    <div class="m-dropdown__wrapper">
+                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                        <div class="m-dropdown__inner">
+                            <div class="m-dropdown__body">
+                                <div class="m-dropdown__content">
+                                    <ul class="m-nav">
+                                        <li class="m-nav__section m-nav__section--first m--hide">
+                                            <span class="m-nav__section-text">
+                                                Quick Actions
+                                            </span>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                <span class="m-nav__link-text">
+                                                    Activity
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                <span class="m-nav__link-text">
+                                                    Messages
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                <span class="m-nav__link-text">
+                                                    FAQ
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                <span class="m-nav__link-text">
+                                                    Support
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                        <li class="m-nav__item">
+                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                Submit
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Subheader -->
 
-        <dd>
-            @Html.DisplayFor(model => model.AMLCompanyProfile.UserId)
-        </dd>
+    <div class="m-content">
+        <div class="m-portlet">
+            <div class="m-portlet__body">
+                <div class="modal-body">
+                    <table class="table table-responsive table-scrollable-borderless">
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt class="col-md-4"><strong>Gaming Operator Name</strong></dt>
+                                    <dd class="font-md">@Html.DisplayFor(model => model.AMLCompanyProfile.Name)</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt class="col-md-4"><strong>Civil action description</strong></dt>
+                                    <dd class="font-md">@Html.DisplayFor(model => model.CivilActionDescription)</dd>
+                                </dl>
+                            </td>
+                        </tr>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CivilActionDescription)
-        </dt>
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt class="col-md-4"><strong>Civil action date</strong></dt>
+                                    <dd class="font-md">@Html.DisplayFor(model => model.CivilActionDate)</dd>
+                                </dl>
+                            </td>
+                        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.CivilActionDescription)
-        </dd>
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt class="col-md-4"><strong>Amount Owed</strong></dt>
+                                    <dd class="font-md">@Html.DisplayFor(model => model.AmountOwed)</dd>
+                                </dl>
+                            </td>
+                        </tr>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CivilActionDate)
-        </dt>
+                       
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt class="col-md-4"><strong>Timestamp</strong></dt>
+                                    <dd class="font-md">@Html.DisplayFor(model => model.TimeStamp)</dd>
+                                </dl>
+                            </td>
+                        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.CivilActionDate)
-        </dd>
+                    </table>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TimeStamp)
-        </dt>
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.TimeStamp)
-        </dd>
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-Info" })
+                </div>
+                <div class="col-md-6">
+                    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-warning" })
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Is_Deleted)
-        </dt>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Is_Deleted)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AmountOwed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AmountOwed)
-        </dd>
-
-    </dl>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+</div>
+    </div>
+<!-- end:: Body -->
